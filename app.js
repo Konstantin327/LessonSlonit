@@ -14,12 +14,12 @@ function chek(hiddenNumber){
     while (state){
         if (res > hiddenNumber){                                                                      // Chek if current number > Hidden number
             max_res = res;                                                                            // In variable Upper limit assign current number
-            console.log('Компьютер 2: ' + res + "  MAX: " + max_res + "  Min: " + min_res );
+            console.log('Компьютер 2: ' + res);
             console.log('Компьютер 1: Меньше \n');
             res = (res - Math.floor(((max_res) - min_res) / 2));                                       // Calculating the middle number 
         }else if(res < hiddenNumber){                                                                  // Chek if current number < Hidden number
             min_res = res;                                                                             // In variable Lower limit assign current number
-            console.log('Компьютер 2: ' + res + "  MAX: " + max_res + "  Min: " + min_res );
+            console.log('Компьютер 2: ' + res);
             console.log('Компьютер 1: Больше \n');
             res = Math.floor(((max_res - min_res) / 2) + min_res);                                     // Calculating the middle number
         }else if(res === hiddenNumber){
