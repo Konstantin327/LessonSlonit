@@ -1,4 +1,4 @@
-const hiddenNumber = 42;                                      // Hidden number
+const hiddenNumber = 0;                                      // Hidden number
 
 function randomValue(){                                       // Function wich generating random number 0 to 100
     let res = Math.floor(Math.random() * 101);
@@ -6,8 +6,8 @@ function randomValue(){                                       // Function wich g
 }
 
 function chek(hiddenNumber){
-    let max_res = 100;  // init. variable Upper limit
-    let min_res = 0;    // init. variable Low limit
+    let max_res = 101;  // init. variable Upper limit
+    let min_res = -1;    // init. variable Low limit
     let currentNum = null;     // init variable Random number
     let state = true;   // flag true/false
     currentNum = randomValue();
