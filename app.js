@@ -8,22 +8,22 @@ function randomValue(){                                       // Function wich g
 function chek(hiddenNumber){
     let max_res = 100;  // init. variable Upper limit
     let min_res = 0;    // init. variable Low limit
-    let res = null;     // init variable Random number
+    let currentNum = null;     // init variable Random number
     let state = true;   // flag true/false
-    res = randomValue();
+    currentNum = randomValue();
     while (state){
-        if (res > hiddenNumber){                                                                      // Chek if current number > Hidden number
-            max_res = res;                                                                            // In variable Upper limit assign current number
-            console.log('Компьютер 2: ' + res);
+        if (currentNum > hiddenNumber){                                                                      // Chek if current number > Hidden number
+            max_res = currentNum;                                                                            // In variable Upper limit assign current number
+            console.log('Компьютер 2: ' + currentNum);
             console.log('Компьютер 1: Меньше \n');
-            res = (res - Math.floor(((max_res) - min_res) / 2));                                       // Calculating the middle number 
-        }else if(res < hiddenNumber){                                                                  // Chek if current number < Hidden number
-            min_res = res;                                                                             // In variable Lower limit assign current number
-            console.log('Компьютер 2: ' + res);
+            currentNum = (currentNum - Math.floor(((max_res) - min_res) / 2));                                       // Calculating the middle number 
+        }else if(currentNum < hiddenNumber){                                                                  // Chek if current number < Hidden number
+            min_res = currentNum;                                                                             // In variable Lower limit assign current number
+            console.log('Компьютер 2: ' + currentNum);
             console.log('Компьютер 1: Больше \n');
-            res = Math.floor(((max_res - min_res) / 2) + min_res);                                     // Calculating the middle number
-        }else if(res === hiddenNumber){
-            console.log('Компьютер 2: ' + res);
+            currentNum = Math.floor(((max_res - min_res) / 2) + min_res);                                     // Calculating the middle number
+        }else if(currentNum === hiddenNumber){
+            console.log('Компьютер 2: ' + currentNum);
             console.log("Компьютер 1: УРА");
             state = false;                                                                             // if current number = hidden number, exit cycle
         }
